@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+    <title>홍유정 공부중</title>
+    <style>
+    @font-face {
+    font-family: 'MaruBuri';
+    src: url('fonts/MaruBuri-Bold.ttf') format('truetype');
+    }
+
+    body {
+        font-family: "맑은고딕";
+        background-color: rgba(235, 232, 232, 0.986);
+        font-size: 14px;
+    }
+
+    a {
+        color:black;
+        text-decoration: none;
+    }
+
+    li{
+        list-style: none;
+        position: relative;
+        padding-left:24px;
+    }
+    li::before{
+        content: "😌";
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .melong::before {
+        content: "😎";
+        font-size: 14px;
+
+    }
+
+    .hongnew{
+            font-size: 14px;
+            font-family: "MaruBuri";
+            white-space: pre-wrap;
+            border: 3px solid gray;
+            background-color: #e9dfde;
+            line-height: 12px;
+            border-radius: 5px;
+            width: 80%;
+            padding: 10px;
+            height: auto;
+        }
+
+      </style>
+</head>
+
+
+
+
+
+<body>
+
+    <h1><a href="index.html">🐬 KIMTAROMI</a></h1>
+
+  <ul> 
+    <li><a href="1.html">Excel</a></li>
+    <li><a href="2.html">Work</a></li>
+    <li><a href="3.html">Interest</a></li>
+    <li class="melong"><a href="4.html" style="text-decoration:underline;color:blue;font-weight:bold;">MEMO</a></li>
+  </ul>  
+
+<h1>✍️ HTML</h1>
+    <p class="hongnew">
+    📝 약간 메모장 느낌, 어떤 내용이 들어갈지 스케치한다고 생각하면 될 듯.<br><br>
+    ✔️ !DOCTYPE html <br>
+    : 문서 타입 선언, "html5로 만든 웹페이지임"이라고 알려주는거, 제일 처음에 입력하면 됨.<br><br>
+    ✔️ hmtl <br>
+    : html의 시작과 끝. "!DOCTYPE html" 다음에 들어오고, 문서 제일 마지막에 배치 됨. <br><br>
+    ✔️ head<br>
+    : 브라우저의 정보를 나타냄. <br>
+      주로 title(탭 이름), meta(언어...??? ex. meta charset="utf-8"), link(css연결), script(JS연결)가 이 사이에 들어옴.<br><br>
+    ✔️ body <br>
+    : 페이지에 실제로 보이는 내용을 넣는 곳. (텍스트, 이미지, 링크, 메뉴 등등 다 여기 들어감.)<br>
+      body는 한 페이지에 한 개만 들어감. <br>
+ 
+
+<h1>✍️ CSS</h1>
+    <p class="hongnew">
+    📝 html로 스케치를 한 후에 색깔을 입혀주는 거라고 생각하면 될 것 같음.<br>
+        지금보니 여태 색칠하고, 글자 굵게 만들고 했던 것들이 다 CSS였던 것 같음.<br>
+        챗GPT하는 말이 CSS는 한 곳에 모아두고 관리하는게 편하다고 함<br><br>
+    ✔️ 선택자<br>
+    : 특정 태그 전체에 적용되는 속성<br>
+      예를 들어 P는 모든 P 태그에 적용. <br>
+      ".****"태그는 class="****"태그에만 적용. ****은 내가 이름짓기 나름. 약간 문단 개념으로 생각하면 될 것 같음. <br><br>
+    ✔️ 속성<br>
+    : 함수<br><br>
+    ✔️ 값<br>
+    : 냉무<br>
+    </p>
+
+    </body>
+    </html>
