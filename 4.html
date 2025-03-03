@@ -12,7 +12,25 @@
         font-family: "맑은고딕";
         background-color: rgba(235, 232, 232, 0.986);
         font-size: 14px;
+        margin: 0;
     }
+
+    h1{
+      font-size: 45px;
+      text-align: center;
+      border-bottom: 1px solid gray;
+      margin: 0;
+      padding: 10px;
+      padding-bottom: 20px;
+    }
+    ul{
+      border-right: 1px solid gray;
+      width: 100px;
+      margin: 0;
+      padding: 15px;
+      padding-right: 30px;
+    }
+
 
     a {
         color:black;
@@ -20,20 +38,20 @@
     }
 
     li{
+        font-size: 18px;
         list-style: none;
         position: relative;
-        padding-left:24px;
+        padding-left:32px;
     }
     li::before{
         content: "😌";
         position: absolute;
         left: 0;
-        top: 0;
     }
 
     .melong::before {
-        content: "😎";
-        font-size: 14px;
+        content: "😎 ";
+        font-size: 18px;
 
     }
 
@@ -73,6 +91,16 @@
       background-color: yellow;
     }
 
+
+    #grid{
+      display: grid;
+      grid-template-columns: 150px 1fr
+    }
+
+    #grid2{
+      padding: 25px;
+    }
+
       </style>
 </head>
 
@@ -81,17 +109,18 @@
 <body>
 
     <h1><a href="index.html">🐬 KIMTAROMI</a></h1>
-
+<div id="grid">
   <ul> 
     <li><a href="1.html">Excel</a></li>
     <li><a href="2.html">Work</a></li>
     <li><a href="3.html">Interest</a></li>
     <li class="melong"><a href="4.html" style="text-decoration:underline;color:blue;font-weight:bold;">MEMO</a></li>
   </ul>  
-
-<h1>✍️ HTML</h1>
+<div id="grid2">
+<h2>✍️ HTML</h2>
     <p class="hongnew">
-    📝 약간 메모장 느낌, 어떤 내용이 들어갈지 스케치한다고 생각하면 될 듯.<br><br>
+    📝 약간 메모장 느낌, 어떤 내용이 들어갈지 스케치한다고 생각하면 될 듯.<br>
+    🔥 div가 정확히 무슨 개념인지 모르겠삼.(박스? 아무의미가 없음 .. ? ) <br><br>
     ✔️ !DOCTYPE html <br>
     : 문서 타입 선언, "html5로 만든 웹페이지임"이라고 알려주는거, 제일 처음에 입력하면 됨.<br><br>
     ✔️ hmtl <br>
@@ -102,70 +131,72 @@
     ✔️ body <br>
     : 페이지에 실제로 보이는 내용을 넣는 곳. (텍스트, 이미지, 링크, 메뉴 등등 다 여기 들어감.)<br>
       body는 한 페이지에 한 개만 들어감. <br>
- 
-
-<h1>✍️ CSS</h1>
-    <div class="hongnew">
-    📝 html로 스케치를 한 후에 색깔을 입혀주는 거라고 생각하면 될 것 같음.<br>
-        지금보니 여태 색칠하고, 글자 굵게 만들고 했던 것들이 다 CSS였던 것 같음.<br>
-        챗GPT하는 말이 CSS는 한 곳에 모아두고 관리하는게 편하다고 함<br><br>
-    ✔️ 선택자<br>
-    : 특정 태그 전체에 적용되는 속성<br>
-      예를 들어 P는 모든 P 태그에 적용. <br>
-      ".****"태그는 class="****"태그에만 적용. ****은 내가 이름짓기 나름. 약간 문단 개념으로 생각하면 될 것 같음. <br>
-    <i style="color:gray;">▶ class는 그룹화하는거라 생각하면 됨. 엑셀로 치면 len 함수.</i>
-       <table border="1">
-      <tr>
-        <th>속성</th>
-        <th>구분</th>
-        <th>사용방법</th>
-        <th>특성</th>
-        <th>우선순위</th>
-        <th>배치순서</th>
-    </tr>
-    <tbody>
-      <tr>
-        <td>선택자</td>
-        <td>id</td>
-        <td>#</td>
-        <td>페이지에 한 번만 사용할 수 있음.여러개 써도 페이지가 돌아가긴 하는데 그냥 하나만 쓰램</td>
-        <td>1</td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td>선택자</td>
-        <td>class</td>
-        <td>.</td>
-        <td>class를 지정한 것들에 스타일을 적용. 여러번 사용 쌉가능.</td>
-        <td>2</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>선택자</td>
-        <td>tag</td>
-        <td>그냥</td>
-        <td>같은 태그로 묶인 것들에 스타일을 적용.</td>
-        <td>3</td>
-        <td>1</td>
-      </tr>
-      </tbody>
-    </table>    
-    <i style="color:gray;">▶ css를 만든 사람들은 좀 더 구체적인 것이 포괄적인 것보다 우선순위가 되게끔 설정을 했다고 함.</i><br>
-    <i style="color:gray;">   그래야지만 tag선택자를 사용해서 전체적인 것들을 정리하고, 그 다음에 id선택자를 통해 예외를 두는 것이 훨씬 효율적이기 때문. 숨참고 러브다이브</i><br>
-    <i style="color:gray;">   사실 그래서 순서도 잘 설정해줘야 함.(근데 아직 어떻게 순서를 배치해야 하는지 잘모르겠삼.)</i><br><br>
-    ✔️ <a href="5.html">속성</a><br>
-    : 함수<br><br>
-    ✔️ 값<br>
-    : 냉무<br>
-  </div>
-
-
-
-<h1>✍️ 기타</h1>
-    <p class="hongnew">
-    📝 속성보다는 태그가 더 큰 개념. 태그 안에 있는 속성은 굳이 닫아줄 필요는 없음. 근데 태크는 "/"로 닫아줘야한다고...<br>
-      ▷ 같은 style이라도 태그로 사용된건 닫아줘야하고, 태그 안에 사용된 스타일은 태그만 닫아줘야 한다고 함.<br>
     </p>
-  
+
+  <h2>✍️ CSS</h2>
+      <div class="hongnew">
+      📝 html로 스케치를 한 후에 색깔을 입혀주는 거라고 생각하면 될 것 같음.<br>
+          지금보니 여태 색칠하고, 글자 굵게 만들고 했던 것들이 다 CSS였던 것 같음.(tag가 아녔음 ..)<br>
+          챗GPT하는 말이 CSS는 한 곳에 모아두고 관리하는게 편하다고 함<br><br>
+      ✔️ 선택자<br>
+      : 특정 태그 전체에 적용되는 속성<br>
+        예를 들어 P는 모든 P 태그에 적용. <br>
+        ".****"태그는 class="****"태그에만 적용. ****은 내가 이름짓기 나름. 약간 문단 개념으로 생각하면 될 것 같음. <br>
+      <i style="color:gray;">▶ class는 그룹화하는거라 생각하면 됨. 엑셀로 치면 len 함수.</i>
+        <table border="1">
+        <tr>
+          <th>속성</th>
+          <th>구분</th>
+          <th>사용방법</th>
+          <th>특성</th>
+          <th>우선순위</th>
+          <th>배치순서</th>
+      </tr>
+      <tbody>
+        <tr>
+          <td>선택자</td>
+          <td>id</td>
+          <td>#</td>
+          <td>페이지에 한 번만 사용할 수 있음.여러개 써도 페이지가 돌아가긴 하는데 그냥 하나만 쓰램</td>
+          <td>1</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>선택자</td>
+          <td>class</td>
+          <td>.</td>
+          <td>class를 지정한 것들에 스타일을 적용. 여러번 사용 쌉가능.</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>선택자</td>
+          <td>tag</td>
+          <td>그냥</td>
+          <td>같은 태그로 묶인 것들에 스타일을 적용.</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        </tbody>
+      </table>    
+      <i style="color:gray;">▶ css를 만든 사람들은 좀 더 구체적인 것이 포괄적인 것보다 우선순위가 되게끔 설정을 했다고 함.</i><br>
+      <i style="color:gray;">   그래야지만 tag선택자를 사용해서 전체적인 것들을 정리하고, 그 다음에 id선택자를 통해 예외를 두는 것이 훨씬 효율적이기 때문. 숨참고 러브다이브</i><br>
+      <i style="color:gray;">   사실 그래서 순서도 잘 설정해줘야 함.(근데 아직 어떻게 순서를 배치해야 하는지 잘모르겠삼.)</i><br>
+      <i style="color:gray;">▶ 🔥id선택자 두 개를 써도되는가봄. CSS와 함께 중첩사용도 가능함. 예를들어 "id가 grid인 ul에만 적용"이런 느낌으로.. 암튼 그렇다고 .. </i><br><br>
+      ✔️ <a href="5.html">속성</a><br>
+      : 함수<br><br>
+      ✔️ 값<br>
+      : 냉무<br>
+    </div>
+
+
+
+  <h2>✍️ 기타</h2>
+      <p class="hongnew">
+      📝 속성보다는 태그가 더 큰 개념. 태그 안에 있는 속성은 굳이 닫아줄 필요는 없음. 근데 태크는 "/"로 닫아줘야한다고...<br>
+        ▷ 같은 style이라도 태그로 사용된건 닫아줘야하고, 태그 안에 사용된 스타일은 태그만 닫아줘야 한다고 함.<br>
+      </p>
+    </div>
+   </div>  
     </body>
     </html>
