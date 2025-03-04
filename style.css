@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'MaruBuri';
+    src: url('fonts/MaruBuri-Bold.ttf') format('truetype');
+    }
+
+    body {
+        font-family: "맑은고딕";
+        background-color: rgba(235, 232, 232, 0.986);
+        font-size: 14px;
+        margin: 0;
+    }
+
+    h1{
+      font-size: 45px;
+      text-align: center;
+      border-bottom: 1px solid gray;
+      margin: 0;
+      padding: 10px;
+      padding-bottom: 20px;
+    }
+    ul{
+      border-right: 1px solid gray;
+      width: 100px;
+      margin: 0;
+      padding: 15px;
+      padding-right: 30px;
+    }
+
+
+    a {
+        color:black;
+        text-decoration: none;
+    }
+
+    li{
+        font-size: 18px;
+        list-style: none;
+        position: relative;
+        padding-left:32px;
+    }
+    li::before{
+        content: "😌";
+        position: absolute;
+        left: 0;
+    }
+
+    .melong::before {
+        content: "😎 ";
+        font-size: 18px;
+
+    }
+
+    .hongnew{
+            font-size: 14px;
+            font-family: "MaruBuri";
+            white-space: pre-wrap;
+            border: 3px solid gray;
+            background-color: #e9dfde;
+            line-height: 12px;
+            border-radius: 5px;
+            width: 90%;
+            overflow-x: auto;
+            padding: 10px;
+            height: auto;
+        }
+
+    table{
+      padding-left: 15px;
+      border-spacing: 0px
+      width : 80%;
+      table-layout : fixed;
+    }
+
+    th{
+      background-color: rgba(212, 209, 209, 0.822);  
+      text-align: center;
+      word-break: break-word;
+    }
+    
+    td{
+      font-size: 12px;
+      text-align: center;
+      word-break: break-word;
+    }
+    tr:hover{
+      background-color: yellow;
+    }
+
+
+    #grid{
+      display: grid;
+      grid-template-columns: 150px 1fr
+    }
+
+    #grid2{
+      padding: 25px;
+    }
+
+    @media(max-width:1400px) 
+      #grid{
+      display: block;
+    }
