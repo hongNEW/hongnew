@@ -9,20 +9,24 @@
 
 <body>
 
-    <h1><a href="index.html">🐬 KIMTAROMI</a></h1>
-<div id="grid">
+    <h1 class="sticky"><a href="index.html">🐬 KIMTAROMI</a></h1>
+
+
+<div class="fixed" id="grid">
   <ul> 
-    <li><a href="1.html">Excel</a></li>
-    <li><a href="2.html">Work</a></li>
-    <li><a href="3.html">Interest</a></li>
+    <li class="list"><a href="1.html">Excel</a></li>
+    <li class="list"><a href="2.html">Work</a></li>
+    <li class="list"><a href="3.html">Interest</a></li>
     <li class="melong"><a href="4.html" style="text-decoration:underline;color:blue;font-weight:bold;">MEMO</a></li>
   </ul>  
+
+
 <div id="grid2">
 <h2>✍️ HTML</h2>
-    <p class="hongnew">
+    <p class="hongnew" id="memo">
     📝 약간 메모장 느낌, 어떤 내용이 들어갈지 스케치한다고 생각하면 될 듯.<br>
     🔥 div가 정확히 무슨 개념인지 모르겠삼.(박스? 아무의미가 없음 .. ? ) <br>
-    <input type="button" value="이해함" onclick="alert('OK! ')"><bR>
+    <input type="button" value="이해함" onclick="changeText()"><br>
     <input type="text" onchange="alert('아직 변경하는 방법은 모름')"><br><br>
 
     ✔️ !DOCTYPE html <br>
@@ -37,17 +41,31 @@
       body는 한 페이지에 한 개만 들어감. <br>
     </p>
 
+<script>
+  function changeText(){
+    let memo = document.getElementById("memo");
+    memo.innerText=memo.innerText.replace(
+      "🔥 div가 정확히 무슨 개념인지 모르겠삼.(박스? 아무의미가 없음 .. ? )",
+      "✔️ 자유롭게 사용할 수 있는 tag ! "
+    );
+  }
+</script>
+
   <h2>✍️ CSS</h2>
       <div class="hongnew">
       📝 html로 스케치를 한 후에 색깔을 입혀주는 거라고 생각하면 될 것 같음.<br>
           지금보니 여태 색칠하고, 글자 굵게 만들고 했던 것들이 다 CSS였던 것 같음.(tag가 아녔음 ..)<br>
           챗GPT하는 말이 CSS는 한 곳에 모아두고 관리하는게 편하다고 함<br><br>
+      📝 틀고정을 하려면 CSS-class 선택자를 이용하는게 편한 방법인 것 같다. <br>
+          position: sticky (위치를 풀로 붙인 것처럼.) <br>
+          🔥 list는 어떻게 적용시키는지 아직 못찾음. <br>
+          
       ✔️ 선택자<br>
       : 특정 태그 전체에 적용되는 속성<br>
         예를 들어 P는 모든 P 태그에 적용. <br>
         ".****"태그는 class="****"태그에만 적용. ****은 내가 이름짓기 나름. 약간 문단 개념으로 생각하면 될 것 같음. <br>
       <i style="color:gray;">▶ class는 그룹화하는거라 생각하면 됨. 엑셀로 치면 len 함수.</i>
-        <table border="1">
+        <table border=1px;>
         <tr>
           <th>속성</th>
           <th>구분</th>
@@ -86,7 +104,7 @@
       <i style="color:gray;">▶ css를 만든 사람들은 좀 더 구체적인 것이 포괄적인 것보다 우선순위가 되게끔 설정을 했다고 함.</i><br>
       <i style="color:gray;">   그래야지만 tag선택자를 사용해서 전체적인 것들을 정리하고, 그 다음에 id선택자를 통해 예외를 두는 것이 훨씬 효율적이기 때문. 숨참고 러브다이브</i><br>
       <i style="color:gray;">   사실 그래서 순서도 잘 설정해줘야 함.(근데 아직 어떻게 순서를 배치해야 하는지 잘모르겠삼.)</i><br>
-      <i style="color:gray;">▶ 🔥id선택자 두 개를 써도되는가봄. CSS와 함께 중첩사용도 가능함. 예를들어 "id가 grid인 ul에만 적용"이런 느낌으로.. 암튼 그렇다고 .. </i><br><br>
+      <i style="color:gray;">▶ 🔥 id선택자 두 개를 써도되는가봄. CSS와 함께 중첩사용도 가능함. 예를들어 "id가 grid인 ul에만 적용"이런 느낌으로.. 암튼 그렇다고 .. </i><br><br>
       ✔️ <a href="5.html">속성</a><br>
       : 함수<br><br>
       ✔️ 값<br>
@@ -97,6 +115,14 @@
     <p class="hongnew">
     📝 html은 내가 작성한 것을 그대로 보여주는거라 치면 Java는 내가 작성한거를 한 번 계산해준다고 생각하면 되는 것 같음. <br>
     📝 'script' 함수 안에 넣어 사용해도 괜찮고, 함수를 그대로 사용해도 괜찮다곤 하는데 챗gpt는 별로 추천하지 않는다고 하네 .. <br>
+    📝 확실하진 않지만 영어 대소문자 구분을 하는게 좋은가봄. <br>
+    ✔️ document<br>
+      - html을 컨트롤할 수 있는 창구 (먼말이야 ... )<br>
+      - 특정요소 찾기, 내용 변경, 스타일 변경, 요소 추가, 이벤트 추가 등등 할 수 있다고 하는데 진심 머라하는지 1도 모르겠다. <br>
+      - id 선택자는 css에만 사용되는게 아니라 java랑도 엮어서 사용이 가능한 것 같음.<br>
+        예를들어서 document로 요소를 찾아 바꾸는 경우 바꿀 요소에 특정 id를 주는 방식으로 사용 되는 것 같음 (추측)<br>
+      
+
     ✔️ Event<br>  
     : java script의 속성 중 하나. 특정 상황이 되면 팝업이 뜬다. <br>
      <i style="color: gray;"> (자바스크립트 태그)</i> input type="button" <i style="color: gray;"> (버튼) </i> value="이해함" <i style="color: gray;"> (팝업창에 나오는 내용)</i> onclick="alert('OK! ')"

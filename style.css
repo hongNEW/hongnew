@@ -14,6 +14,7 @@
     }
 
     h1{
+      
       font-size: 45px;
       text-align: center;
       border-bottom: 1px solid gray;
@@ -53,6 +54,13 @@
 
     }
 
+
+    .sticky {
+      position: sticky;
+      top: 0; /* 상단에 고정 */
+      background-color:#e9dfde;
+    }
+    
     .hongnew{
             font-size: 14px;
             font-family: "MaruBuri";
@@ -66,7 +74,7 @@
             padding: 10px;
             height: auto;
         }
-
+    
     table{
       padding-left: 15px;
       border-spacing: 0px
@@ -88,7 +96,7 @@
     tr:hover{
       background-color: yellow;
     }
-
+    
 
     #grid{
       display: grid;
