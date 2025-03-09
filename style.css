@@ -1,10 +1,13 @@
 @font-face {
-    font-family: 'MaruBuri';
-    src: url('fonts/MaruBuri-Bold.ttf') format('truetype');
-    }
+  font-family: 'MaruBuriExtraLight';
+  src: url('https://hangeul.pstatic.net/hangeul_static/font/MaruBuriTTF/MaruBuri-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
 
     body {
-        font-family: "맑은고딕";
+        font-family: 'MaruBuriExtraLight', sans-serif;
         background-color: rgba(235, 232, 232, 0.986);
         font-size: 14px;
         margin: 0;

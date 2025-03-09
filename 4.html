@@ -2,111 +2,7 @@
 <html><head>
   <meta charset="utf-8">
     <title>💖 홍유정 공부중 💖</title>
-    <style>
-    @font-face {
-    font-family: 'MaruBuri';
-    src: url('fonts/MaruBuri-Bold.ttf') format('truetype');
-    }
-
-    body {
-        font-family: "맑은고딕";
-        background-color: rgba(235, 232, 232, 0.986);
-        font-size: 14px;
-        margin: 0;
-    }
-
-    h1{
-      font-size: 45px;
-      text-align: center;
-      border-bottom: 1px solid gray;
-      margin: 0;
-      padding: 10px;
-      padding-bottom: 20px;
-    }
-    ul{
-      border-right: 1px solid gray;
-      width: 100px;
-      margin: 0;
-      padding: 15px;
-      padding-right: 30px;
-    }
-
-
-    a {
-        color:black;
-        text-decoration: none;
-    }
-
-    li{
-        font-size: 18px;
-        list-style: none;
-        position: relative;
-        padding-left:32px;
-    }
-    li::before{
-        content: "😌";
-        position: absolute;
-        left: 0;
-    }
-
-    .melong::before {
-        content: "😎 ";
-        font-size: 18px;
-
-    }
-
-    .hongnew{
-            font-size: 14px;
-            font-family: "MaruBuri";
-            white-space: pre-wrap;
-            border: 3px solid gray;
-            background-color: #e9dfde;
-            line-height: 12px;
-            border-radius: 5px;
-            width: 90%;
-            overflow-x: auto;
-            padding: 10px;
-            height: auto;
-        }
-
-    table{
-      padding-left: 15px;
-      border-spacing: 0px
-      width : 80%;
-      table-layout : fixed;
-    }
-
-    th{
-      background-color: rgba(212, 209, 209, 0.822);  
-      text-align: center;
-      word-break: break-word;
-    }
-    
-    td{
-      font-size: 12px;
-      text-align: center;
-      word-break: break-word;
-    }
-    tr:hover{
-      background-color: yellow;
-    }
-
-
-    #grid{
-      display: grid;
-      grid-template-columns: 150px 1fr
-    }
-
-    #grid2{
-      padding: 25px;
-    }
-
-    @media(max-width:1400px) 
-      #grid{
-      display: block;
-    }
-
-      </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
@@ -125,7 +21,10 @@
 <h2>✍️ HTML</h2>
     <p class="hongnew">
     📝 약간 메모장 느낌, 어떤 내용이 들어갈지 스케치한다고 생각하면 될 듯.<br>
-    🔥 div가 정확히 무슨 개념인지 모르겠삼.(박스? 아무의미가 없음 .. ? ) <br><br>
+    🔥 div가 정확히 무슨 개념인지 모르겠삼.(박스? 아무의미가 없음 .. ? ) <br>
+    <input type="button" value="이해함" onclick="alert('OK! ')"><bR>
+    <input type="text" onchange="alert('아직 변경하는 방법은 모름')"><br><br>
+
     ✔️ !DOCTYPE html <br>
     : 문서 타입 선언, "html5로 만든 웹페이지임"이라고 알려주는거, 제일 처음에 입력하면 됨.<br><br>
     ✔️ hmtl <br>
@@ -195,11 +94,14 @@
     </div>
 
   <h2>✍️ Java Script </h2>
-    <p class="hongnew"></p>
-      
+    <p class="hongnew">
+    📝 html은 내가 작성한 것을 그대로 보여주는거라 치면 Java는 내가 작성한거를 한 번 계산해준다고 생각하면 되는 것 같음. <br>
+    📝 'script' 함수 안에 넣어 사용해도 괜찮고, 함수를 그대로 사용해도 괜찮다곤 하는데 챗gpt는 별로 추천하지 않는다고 하네 .. <br>
+    ✔️ Event<br>  
+    : java script의 속성 중 하나. 특정 상황이 되면 팝업이 뜬다. <br>
+     <i style="color: gray;"> (자바스크립트 태그)</i> input type="button" <i style="color: gray;"> (버튼) </i> value="이해함" <i style="color: gray;"> (팝업창에 나오는 내용)</i> onclick="alert('OK! ')"
 
-
-      
+    </p>
   <h2>✍️ 기타</h2>
       <p class="hongnew">
       📝 속성보다는 태그가 더 큰 개념. 태그 안에 있는 속성은 굳이 닫아줄 필요는 없음. 근데 태그는 "/"로 닫아줘야한다고..<br>
