@@ -14,16 +14,16 @@
     }
 
     h1{
-      
       font-size: 45px;
-      text-align: center;
+      text-align: center; /*텍스트위치*/
       border-bottom: 1px solid gray;
-      margin: 0;
-      padding: 10px;
-      padding-bottom: 20px;
+      margin: 0; /*이것도 여백*/
+      padding: 10px; /*위에 여백*/
+      padding-bottom: 20px; /*아래 여백*/
     }
+    
     ul{
-      border-right: 1px solid gray;
+      border-right: 1px solid gray; /*오른쪽선*/
       width: 100px;
       margin: 0;
       padding: 15px;
@@ -39,12 +39,12 @@
     li{
         font-size: 18px;
         list-style: none;
-        position: relative;
+        position: relative; /*문서흐름에 따라 배치*/
         padding-left:32px;
     }
     li::before{
         content: "😌";
-        position: absolute;
+        position: absolute; /* 가장 가까운 position이 설정된 곳을 기준으로 잡는다. 먼말이야,, */
         left: 0;
     }
 
@@ -53,7 +53,6 @@
         font-size: 18px;
 
     }
-
 
     .sticky {
       position: sticky;
